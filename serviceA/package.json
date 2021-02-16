@@ -1,0 +1,24 @@
+{
+  "name": "servicea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kshitijcode/vscodedebug.git"
+  },
+  "author": "Kshitij",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshitijcode/vscodedebug/issues"
+  },
+  "homepage": "https://github.com/kshitijcode/vscodedebug#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "request": "^2.88.2"
+  }
+}

@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  servicea-api:
+    # Using a Dockerfile is optional, but included for completeness.
+    build:
+      context: serviceA/
+      dockerfile: Dockerfile
+      # [Optional] You can use build args to set options. e.g. 'VARIANT' below affects the image in the Dockerfile
+
+    volumes:
+      - ./serviceA:/app
+    ports:
+      - 3000:3000
+      - 3001:3001
+      - 5000:5000
+      - 5001:5001
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /app/node_modules/nodemon/bin/nodemon.js --inspect=0.0.0.0:5000 /app/index.js
+
+  serviceb-api:
+    build:
+      context: serviceB/
+      dockerfile: Dockerfile
+
+    volumes:
+      - ./serviceB:/app
+    # Overrides default command so things don't shut down after the process ends.
+    command: /app/node_modules/nodemon/bin/nodemon.js  --inspect=0.0.0.0:5001  /app/index.js
+
+    network_mode: service:servicea-api

@@ -7,7 +7,7 @@ app.get('/result', (req, res) => {
   var response = 'Service A '
 
   request('http://localhost:3001/play', { json: true }, (err, res, body) => {
-    response = response + res.body
+    response = response + body
   })
   res.send(response)  
 })

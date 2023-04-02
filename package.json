@@ -1,0 +1,21 @@
+{
+  "name": "vscodedebug",
+  "version": "1.0.0",
+  "description": "``` # Getting started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd serviceb && npm install && cd .. && cd servicea && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshitijcode/vscodedebug.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshitijcode/vscodedebug/issues"
+  },
+  "homepage": "https://github.com/kshitijcode/vscodedebug#readme"
+}
